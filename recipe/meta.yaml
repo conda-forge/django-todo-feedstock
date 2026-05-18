@@ -1,18 +1,18 @@
 {% set name = "django-todo" %}
-{% set version = "2.5.0" %}
+{% set version = "2.5.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/django-todo-{{ version }}.tar.gz
-  sha256: faf17048caef44959f11b13d25a3510c0b281c12dbd45829b7a8fbe08fdd868b
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 392fdeddaf88ac31705d7a8f18c26b3f2d16bcd7028cafb39b3737200ed934ff
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,6 +21,7 @@ requirements:
     - wheel
     - pip
   run:
+    - faker
     - python >={{ python_min }}
     - django >=4.0
     - factory_boy
