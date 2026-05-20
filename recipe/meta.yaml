@@ -1,5 +1,5 @@
 {% set name = "django-todo" %}
-{% set version = "2.5.4" %}
+{% set version = "2.5.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 28e9500eee93a5ec4fa9e94e5535e188fb958caf6f3abf8c99b35c6baffe4fae
+  sha256: 8cddb65e2a434323df8074c923be3d88589cfe55c74f639aea742110a0f1358f
 
 build:
   noarch: python
