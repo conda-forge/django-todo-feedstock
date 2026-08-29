@@ -1,14 +1,14 @@
 {% set python_min = "3.11" %}
 {% set name = "django-todo" %}
-{% set version = "2.6.2" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 00807def8fc6552f35560b39d2b8499c764f2efe83e70302e94980cb2330c8db
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 7390915d2460e7298f1d33c217c64d675ffbd009cb4aea03e4404628bf8dda0c
 
 build:
   noarch: python
